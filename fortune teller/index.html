@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--  Aaeron Jhonson-Whyte
+      et712 | 2/14/19
+-->
+<html>
+  <head>
+    <title>Sky3's future maker</title>
+    <script src = "future_maker.js"> </script>
+    <link rel= "stylesheet" type= "text/css" href= "future_maker.css">
+  </head>
+
+  <body>
+    <h1>Sky3's future maker</h1>
+    <h3>We <strong>don't</strong> tell you your future. No one can. </h3>
+
+    <p>With Sky3's <em>future maker</em>, you write your own story. You fill in
+      the blanks, and with Sky3's clouds, we will make your future!
+    </p>
+
+    <form id= "f_m" action="#" method= "get">
+      name: <input type= "text" id= "yourname">
+      <br/>
+
+      <fieldset>
+        <legend>life partner</legend>
+        option 1: <input type= "text" id= "lp1">
+        option 2: <input type= "text" id= "lp2">
+      </fieldset>
+
+      <fieldset>
+        <legend>city of residence</legend>
+        place 1: <input type= "text" id= "cr1">
+        place 2: <input type= "text" id= "cr2">
+        place 3: <input type= "text" id= "cr3">
+      </fieldset>
+
+      <fieldset>
+        <legend>profession</legend>
+        job 1: <input type= "text" id= "pr1">
+        job 2: <input type= "text" id= "pr2">
+        job 3: <input type= "text" id= "pr3">
+      </fieldset>
+
+      <fieldset>
+        <legend>number of children</legend>
+        amount 1: <input type= "number" id= "nc1">
+        amount 2: <input type= "number" id= "nc2">
+
+      </fieldset>
+
+      <input id= "sub" type= "submit" value= "submit" onclick="write_future(dice_roll())">
+    </form>
+
+
+  </body>
+</html>

@@ -1,0 +1,22 @@
+/*
+  Aaeron Jhonson-Whyte
+      et712 | 2/14/19
+*/
+body {
+  background-color: turquoise;
+  font-family: "Courier New", Courier, monospace;
+}
+#f_m {
+  background-color: darkslategray;
+  color: gold;
+  font-family: "Courier New", Courier, monospace;
+
+}
+fieldset {
+  background-color: firebrick;
+
+}
+#sub {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+}
