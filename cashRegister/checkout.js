@@ -91,7 +91,7 @@ function reset(){
   }
 };
 function populate() {
-  //item1
+  //item1 is an item
   document.getElementById('name1').innerHTML= cartItem[0].name + ': ' + cartItem[0].price;
   document.getElementById('use1').innerHTML= cartItem[0].use;
   showQuantity(0);
