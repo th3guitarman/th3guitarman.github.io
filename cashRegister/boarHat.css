@@ -7,7 +7,6 @@ body {
   color: #fff2cc; /**/
   font-family: 'Aclonica';font-size: 22px;
 }
-
 th, td, button {
   border-radius: 25px;
   background-color: #fff2cc;
@@ -34,10 +33,6 @@ td {
 img {
   border: 2px solid #993300;
   border-radius: 25px;
-  /*
-  display: block;
-  margin-left: auto;
-  margin-right: auto;*/
 }
 #name1, #name2, #name3, #name4, #name5, #nameT {
   width: 1000px;
@@ -47,11 +42,10 @@ img {
 }
 #use1, #use2, #use3, #use4, #use5, #useT {
   width: 1000px;
-  font-size:25px; 
-
+  font-size:25px;
 }
 #quantity1, #quantity2, #quantity3, #quantity4, #quantity5, #quantityT {
-  width: 100px;
+  width: 120px;
   background-color: #d9ccbf;
 }
 /*
