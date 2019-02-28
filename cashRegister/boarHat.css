@@ -1,0 +1,69 @@
+/*
+Aaeron Jhonson-Whyte
+*/
+body {
+  text-align: center;
+  background-color: #705943; /*faded dark brownish*/
+  color: #fff2cc; /**/
+  font-family: 'Aclonica';font-size: 22px;
+}
+
+th, td, button {
+  border-radius: 25px;
+  background-color: #fff2cc;
+  font-family: 'Averia Sans Libre';font-size: 22px;
+}
+th {
+  border: 2px solid #fff2cc;
+  background-color: #993300;
+  color: #fff2cc;
+}
+td {
+  border: 3px solid #993300;
+  width: 450px;
+  height: 200px;
+  font-size: 20px;
+  color: #403326;
+  padding-top: 5px;
+}
+#cover {
+  border: 3px solid #fff2cc;
+  border-radius: 22%;
+  height: 700px;
+}
+img {
+  border: 2px solid #993300;
+  border-radius: 25px;
+  /*
+  display: block;
+  margin-left: auto;
+  margin-right: auto;*/
+}
+#name1, #name2, #name3, #name4, #name5, #nameT {
+  width: 1000px;
+  background-color: #d9ccbf;
+  font-weight: bold;
+  font-size: 34px;
+}
+#use1, #use2, #use3, #use4, #use5, #useT {
+  width: 1000px;
+  font-size:25px; 
+
+}
+#quantity1, #quantity2, #quantity3, #quantity4, #quantity5, #quantityT {
+  width: 100px;
+  background-color: #d9ccbf;
+}
+/*
+color theme1:
+reddish: #993300
+light tan: #fff2cc
+dark brownish: #403326
+brownish: #705943
+light brownish: ##d9ccbf;
+
+color theme2:
+504030
+
+
+*/
