@@ -25,7 +25,7 @@ var cartItem = [
     limit:'99'
   },//limit 99
   { name:"First Aid Kit",
-    use:"A bandages, cleaning solution, painkillers, and other first aid amenities.",
+    use:"A set of bandages, cleaning solution, painkillers, and other first aid amenities.",
     price:"400",
     quantity:'0',
     limit:'999'
