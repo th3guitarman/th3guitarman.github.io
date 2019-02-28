@@ -118,8 +118,8 @@ function populate() {
   createCart();
 
   document.getElementById('nameT').innerHTML= 'Purchase Total';
-  document.getElementById('useT').innerHTML=  'Add items to the cart double/clicking the <strong>+</strong>' +
-  ' and <strong>-</strong> buttons. When ready, press <strong>buy</strong> to view your total.';
+  document.getElementById('useT').innerHTML=  'Click the <strong>+</strong>' +
+  ' and <strong>-</strong> to add items to the cart. Double click to add ten items. When ready, press <strong>buy</strong> to view your total.';
   document.getElementById('quantityT').innerHTML= "<button type= 'button' onClick= 'createCart(cartItem);'>buy</button>" +
     "<button type= 'button' onClick= 'reset();'>reset</button>";
 
