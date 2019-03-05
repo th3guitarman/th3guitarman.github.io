@@ -9,41 +9,46 @@ var validity = {
   number:'',
   error:''
 }
+function readCard (inputCard) {
+  validity.number = inputCard.toString();
+  inputCard = validity.number.replace(/-/g, '');
 
-function validateCreditCard(input) {
-  //input is a string
+  console.log(validity.number + " : " + inputCard);
+} 
+
+function validateCreditCard(inputCard) {
+  //inputCard is a string
   var same, sum = 0;
 
-  validity.number = input.toString();
-  input = validity.number.replace('-', '');
-
-  console.log(validity.number + " " + input);
+  validity.number = inputCard.toString();
+  inputCard = validity.number.replace(/-/g, '');
+ 
+  
   //verifyLength()
-  if (input.length != 16) {
-    if (input.length > 16)
-      validity.error += "too long- ";
-    else if (input.length < 16)
-      validity.error += "too short- ";
-  }
-  else
-    validity.valid = true;
 
-  for (x in input) {
-    var same = input[0];
-    if (input[0] != input[x]) {
-      break;
-    }
-    else
-      validity.error += "too homogenous- ";
+  if (inputCard.length != 16) {
+    if (inputCard.length > 16) {
+      validity.error += "too long- "; }
+    else if (inputCard.length < 16) {
+      validity.error += "too short- "; }
+  }
+  else {
+    validity.valid = true; }
+
+  for (x in inputCard) {
+    var same = inputCard[0];
+    if (inputCard[0] != inputCard[x]) {
+      break; }
+    else {
+      validity.error += "too homogenous- "; }
   }
 
-  if ((input[input.length - 1] % 2) != 0)
-    validity.error += "odd last digit- ";
+  if ((inputCard[inputCard.length - 1] % 2) != 0) {
+    validity.error += "odd last digit- "; }
 
-  for (x in input) {
-    sum += input[x];
-  }
-  if (sum <= 16)
-    validity.error += "sum of digits- ";
+  for (x in inputCard) {
+    sum += inputCard[x]; }
+  if (sum <= 16) {
+    validity.error += "sum of digits- "; }
 
 }
