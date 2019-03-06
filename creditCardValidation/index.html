@@ -4,14 +4,25 @@
     <meta charset="utf-8">
     <title>CCV</title>
     <script src= 'main.js'></script>
+    <script type= 'text/javascript'
+    src= "https://code.jquery.com/jquery-3.3.1.min.js"></script>
   </head>
   <body>
     <h1>welcome to the credit card validation page</h1>
     <form>
-      Enter credit card number (with or without dashes): <br>
+      <div style= "text-decoration: line-through;"> Enter credit card number (with or without dashes):</div> <br>
       <input type= 'text' id= 'ccin'/>
-      <input id= 'sub' type= 'submit' value= 'submit' onclick= 'readCard('document.getElementById('ccin').innerHTML')'/>
+      <input id= 'sub' type= 'submit' value= 'submit'
+      onclick= "readCard('document.getElementById('ccin').innerHTML')"/>
     </form>
+    <button></button>
 
+    <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("div").hide(1000); //measured in milliseconds
+      })
+    });
+    </script>
   </body>
 </html>
