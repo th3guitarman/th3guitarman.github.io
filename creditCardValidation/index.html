@@ -8,11 +8,17 @@
     src= "https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel= "stylesheet" type= "text/css" href= "style.css">
     <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Catamaran' rel='stylesheet'>
   </head>
 
   <body>
 
     <h1>Is this a <em>real</em> credit card? Or, is it just <em>fanta-CC</em>?</h1>
+    <button id= 'about' type='button' onclick='window.alert("-Name: Aaeron Jhonson-Whyte\n" +
+    "-Date: 3/7/19\n-Class: et712\n-About: This is the result of HW 4: Credit Card Validation.\n" +
+    "This page works with both the console and the form input.\n" +
+    "Please, enjoy.")'>About
+    </button>
     <form action= # id= 'cvform'>
       <div>Enter a credit card number (with or without dashes):<br />
       <input type= 'text' id= 'ccin'/>
@@ -33,7 +39,6 @@
       <p id= 'r2'></p>
       </div>
     </div>
-
 
     <script>
     $(document).ready(function(){

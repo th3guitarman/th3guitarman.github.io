@@ -9,8 +9,11 @@ body {
   background-size: 100%;
 
 }
-input {
-  font-family: 'Audiowide';
-
+input, button {
+  font-family: 'Catamaran';
   font-size: 1.5em;
+}
+
+#about {
+  font-size: .35em;
 }

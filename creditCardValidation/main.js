@@ -23,7 +23,6 @@ function submitCard () {
     document.getElementById('r2').innerHTML= "This is just fanta-CC! <br />" +
     "<div><button type='button' onclick= 'document.location.reload()'>let's try again</button></div>";
   }
-
 }
 
 function verifyNum(inputCard) {
@@ -32,7 +31,7 @@ function verifyNum(inputCard) {
   //  isNum = false;
   //}
 
-  if (Number(inputCard) != inputCard) {
+  if (Number(inputCard) != inputCard) { //Number(x) returns 'NaN' if x is not a number and returns 'x' if x is a number
     return Number(inputCard) + "- "; //"contains NaN chars- ";
   }
   else {
@@ -100,10 +99,10 @@ function verifyDate(inputMM, inputYYYY) {
   var today = new Date();
 
   if (today.getTime() > Date.parse(inputDate)) {
-    return "expired- " + inputDate;
+    return "expired- " + inputMM + '-' + inputYYYY;
   }
   else {
-    return '' + inputDate;
+    return '' + inputMM + '-' + inputYYYY;
   }
 }
 
@@ -124,6 +123,7 @@ function validateCreditCard(inputCard, inputMM, inputYYYY) {
   validity.error += verifyUnique(inputCard);
   validity.error += verifyLast(inputCard);
   validity.error += verifySum(inputCard);
+
   validity.expiry += verifyDate(inputMM, inputYYYY);
 
   if (validity.error == '') {
