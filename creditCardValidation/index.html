@@ -6,21 +6,40 @@
     <script src= 'main.js'></script>
     <script type= 'text/javascript'
     src= "https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel= "stylesheet" type= "text/css" href= "style.css">
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
   </head>
+
   <body>
-    <h1>welcome to the credit card validation page</h1>
-    <form>
-      <div style= "text-decoration: line-through;"> Enter credit card number (with or without dashes):</div> <br>
+
+    <h1>Is this a <em>real</em> credit card? Or, is it just <em>fanta-CC</em>?</h1>
+    <form action= # id= 'cvform'>
+      <div>Enter a credit card number (with or without dashes):<br />
       <input type= 'text' id= 'ccin'/>
-      <input id= 'sub' type= 'submit' value= 'submit'
-      onclick= "readCard('document.getElementById('ccin').innerHTML')"/>
+      </div>
+
+      <div>Enter the expiration date (MM-YYYY):<br />
+      <input type= 'number' id= 'mmin' min= '1' max= '12'/>      <input type= 'number' id= 'yyin' min= '1958'/>
+      </div>
+      <br />
+      <input id= 'sub' type= 'submit' value= "let's find out"
+      onclick= "submitCard()"/>
     </form>
-    <button></button>
+
+    <div id= 'res'>
+      <p id= 'r1'></p>
+
+      <div>
+      <p id= 'r2'></p>
+      </div>
+    </div>
+
 
     <script>
     $(document).ready(function(){
-      $("button").click(function(){
-        $("div").hide(1000); //measured in milliseconds
+      $("#sub").click(function(){
+        $("form").hide(750); //measured in milliseconds
+        $("#res").show(1500);
       })
     });
     </script>
