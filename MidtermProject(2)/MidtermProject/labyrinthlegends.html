@@ -27,29 +27,30 @@
 </header>
 
 <div class="hero">
-	<h1>Fire Emblem: Labrynth Legends</h1>
+	<h1>Fire Emblem: Labyrinth Legends</h1>
 	<p>The heroes that brave the dark to bring the light...</p>
 </div>
 
 <main role="main">
 	<div class="content-wrapper">
+		<p id="press-quote">You saved our future—no small feat. We will use it to find a permanent solution for the fell dragon. And we shall do so together. — Lucina</p>
 		<p style= 'text-align: center'>
-			This is the Thabes Labyrinth. Let none set foot within its cursed halls. <br />
-	    In Thabes lived an alchemist named Forneus, much praised for his genius. <br />
+			I. This is the Thabes Labyrinth. Let none set foot within its cursed halls. <br />
+	    II. In Thabes lived an alchemist named Forneus, much praised for his genius. <br />
 	    In time, he would be feared by all. <br />
-	    Two matters consumed Forneus, and he spent his life in their pursuit. <br />
+	    III. Two matters consumed Forneus, and he spent his life in their pursuit. <br />
 	    The first was how to wake the dead and control them as his army. <br />
 	    The second was the creation of a singular, perfect being. <br />
-	    We senators sent forth messengers to Forneus. None returned. <br />
+	    IV. We senators sent forth messengers to Forneus. None returned. <br />
 	    Next, the Council dispatched soldiers. Still none returned. <br />
 	    Thus, the Council chose to seal Forneus's workshop with him inside it. <br />
 	    The seal they used was made to last until the city crumbled to sand. <br />
-	    Here lies sealed the workshop of the demon alchemist Forneus. <br />
-	    A critical component in the death mask is a particular shelled insect. <br />
+	    V. Here lies sealed the workshop of the demon alchemist Forneus. <br />
+	    VI. A critical component in the death mask is a particular shelled insect. <br />
 	    I have come to call these marvels of nature thanatophages. <br />
 	    Placed on a cadaver, thanatophages set down roots and assert control. <br />
-	    At last, blood from a divine dragon! Its power is terrifying. Beautiful. <br />
-	    The Senate has granted me all I need to craft life anew. I've succeeded. <br />
+	    VII. At last, blood from a divine dragon! Its power is terrifying. Beautiful. <br />
+	    VIII. The Senate has granted me all I need to craft life anew. I've succeeded. <br />
 	    At first, it was a tiny thing. But on day 80, I gave it my blood. It grew. <br />
 	    Its voice echoes in my head. Dark thoughts. Violent th- <a href="#">contact&nbsp;us</a>.</p>
 
@@ -59,12 +60,12 @@
 			<img src="img/valentia.jpg" alt="Valentia">
 			<figcaption>The continent of Valentia</figcaption>
 		</figure>
-		<p id="press-quote">You saved our future—no small feat. We will use it to find a permanent solution for the fell dragon. And we shall do so together. — Lucina</p>
+
 
 		<p>Before you stand ten legendary heroes whose efforts brought the whole continent of Valm (formerly Valentia) from the brink of total destruction. With their combined strength and tenacity, these youth thwarted the heretic Duma Faifthful, united the wartorn country, and liberated humanity.
 		</p>
 		<p>
-		After completing a defensive conquest of Valentia in a high stakes war for everyone’s survival, our heroes descend into the dark of Duma tower. They faced off against hordes of Risen/Undead and constructs, a corrupted Rigelian General, Jedah - archbishop of the Duma Faithful, and Duma - the Fell God - himself. Emerging triumphant, our heroes prepare to face a new threat: Thabes Labrinyth.
+		After completing a defensive conquest of Valentia in a high stakes war for everyone’s survival, our heroes descend into the dark of Duma tower. They faced off against hordes of Risen/Undead and constructs, a corrupted Rigelian General, Jedah - archbishop of the Duma Faithful, and Duma - the Fell God - himself. Emerging triumphant, our heroes prepare to face a new threat: Thabes Labrinyth...
 		</p>
 	</div>
 </main>
@@ -84,6 +85,7 @@
 			<option value= "sonya">Sonya</option>
 			<option value= "est">Est</option>
 			<option value= "genny">Genny</option>
+			<option id= 'newHero' hidden value= "new">New Hero</option>
 		</select>
 	</header>
 
@@ -159,7 +161,8 @@
 
 <script>
 	var quotesArray = [
-		'I fight to protect what is dear. — Celica',
+		'This grand husk of a capital once coursed with magic, but it has been forgotten for centuries, neglected, the victim of human folly. Now we disturb its rest…for what? What lies waiting for us deeper in? — Alm',
+		'An ancient fallen capital, its people drowned in their own magic power… This place has slumbered for centuries as a result of their greed. — Celica',
 		'Aaaaaand, we\'re done! — Gray',
 		'No matter how quiet a village you hail from, in the hands of a capable teacher, one can become every bit as strong as a royal knight. I find that thought quite inspiring. — Lukas',
 		'Never count Tobin out! — Tobin',
@@ -202,14 +205,49 @@
 				<label for="recruit-bio">Bio:</label>
 				<input id="recruit-bio" name="recruit-bio" type="text">
 			</div>
-		
-			<input id="submit" type="submit" value="Submit">
+
+			<button id="submit" type="button" onclick= 'newHero()'>submit</button>
 		</form>
 	</div>
+
+	<div>
+		<p><strong>Name: </strong><span id="rec-name"></span></p>
+		<p><strong>Age: </strong><span id="rec-age">17</span></p>
+		<p><strong>Hometown: </strong><span id="rec-hometown">Ylisse</span></p>
+		<p><strong>Weapon: </strong><span id="rec-weapon">Falchion</span></p>
+		<p><strong>Vocation: </strong><span id="rec-vocation">Lord</span></p>
+		<p><strong>Rating: </strong><span id="rec-rating"> - </span></p>
+		<p><strong>Bio: </strong><span id="rec-bio">Lucina is a strong willed and driven woman who is determined to alter the dark future she came from. She values her comrades deeply and has a sense of justice. Due to the countless deaths and horrific events of the future, she dislikes any form of death, even "noble" ones.<br />
+		Her main motivations come from her love for her parents, especially Chrom. Lucina is willing to do whatever it takes to see that Chrom stays alive, even if it means going against her wish for no needless deaths. Nevertheless, she is obedient to Chrom and puts her trust in her father's judgements, showing a strong bond of trust with her father.</span></p>
+	</div>
 </div>
+
+<script>
+	function newHero() {
+		console.log(document.getElementById('recruit-name').value);
+		var name = document.getElementById('recruit-name').value,
+		age = document.getElementById('recruit-age').value,
+		hometown = document.getElementById('recruit-hometown').value,
+		weapon = document.getElementById('recruit-weapon,').value,
+		vocation = document.getElementById('recruit-vocation,').value,
+		rating = document.getElementById('recruit-rating').value,
+		bio = document.getElementById('recruit-bio').value;
+		document.getElementById('rec-name').textContent = name;
+		// document.getElementById('rec-age').innerHTML = document.getElementById('recruit-age').value;
+		// document.getElementById('rec-hometown').innerHTML = document.getElementById('recruit-hometown').value;
+		// document.getElementById('rec-weapon').innerHTML = document.getElementById('recruit-weapon,').value;;
+		// document.getElementById('rec-vocation').innerHTML = document.getElementById('recruit-vocation,').value;
+		// document.getElementById('rec-rating').innerHTML = document.getElementById('recruit-rating').value;;
+		// document.getElementById('rec-bio').innerHTML = document.getElementById('recruit-bio').value;
+		document.getElementById('newHero').removeAttribute('hidden');
+
+	};
+</script>
+
 <footer>
 	<p>Made in NY <br>Copyright © Postcard Generator</p>
 </footer>
+
 
 <script>
 	var states = document.getElementById('states');
