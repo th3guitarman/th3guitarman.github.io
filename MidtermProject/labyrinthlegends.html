@@ -85,7 +85,7 @@
 			<option value= "sonya">Sonya</option>
 			<option value= "est">Est</option>
 			<option value= "genny">Genny</option>
-			<option id= 'newHero' hidden value= "new">New Hero</option>
+			<option id= 'newHero' hidden value= "anew">New Hero</option>
 		</select>
 	</header>
 
@@ -97,7 +97,7 @@
 			</div>
 		</div>
 		<div class="info-holder">
-			<p><strong>Name: </strong><span id="info-name2">Lucina</span></p>
+
 			<p><strong>Age: </strong><span id="info-age">17</span></p>
 			<p><strong>Hometown: </strong><span id="info-hometown">Ylisse</span></p>
 			<p><strong>Weapon: </strong><span id="info-weapon">Falchion</span></p>
@@ -112,26 +112,34 @@
 <div class="outer-wrapper">
 	<div class="content-wrapper">
 		<header>
-			<h1>Missive Generator</h1>
-			<p class="subtitle">Generate Missives for your Country</p>
+			<h1>The Cartograph</h1>
+			<p class="subtitle">A comprehensive cartograph of the labyrinth</p>
 		</header>
 		<main role="main">
 			<div class="first step">
-				<h2>1. Choose a State</h2>
-				<select name="states" id="states">
-					<option selected disabled value="fe">Fire Emblem</option>
-					<option value="zofia">Zofia</option>
-					<option value="rigel">Rigel</option>
-					<option value="ylisse">Ylisse</option>
-					<option value="grimleal">Grimleal</option>
+				<h2>1. Choose a floor</h2>
+				<select name="floors" id="floors">
+					<option selected disabled value="open">Thabes Labyrinth</option>
+					<option value="b1">Floor 1</option>
+					<option value="b2">Floor 2</option>
+					<option value="b3">Floor 3</option>
+					<option value="b4">Floor 4</option>
+					<option value="b5a">Floor 5a</option>
+					<option value="b5b">Floor 5b</option>
+					<option value="b6">Floor 6</option>
+					<option value="b7">Floor 7</option>
+					<option value="b8">Floor 8</option>
+					<option value="b9a">Floor 9a</option>
+					<option value="b9b">Floor 9b</option>
+					<option value="b10">Floor 10</option>
 				</select>
 			</div>
 
 			<div class="second step">
-				<h2>2. Enjoy Your Missive!</h2>
+				<h2>2. Enjoy Your Map!</h2>
 				<div id="postcard">
-					<p id="greeting">To Generate a Missive</p>
-					<p id="state-heading">Choose a state</p>
+					<p id="greeting">Ready to Explore?</p>
+					<p id="state-heading">Choose a floor</p>
 				</div>
 			</div>
 		</main>
@@ -144,7 +152,7 @@
 		console.log(document.getElementById('hero-list').value);
 		document.getElementById('info-pic').src= 'img1/'+selected+'.gif';
 		document.getElementById('info-name').textContent = heroData[selected].name;
-		document.getElementById('info-name2').textContent = document.getElementById('hero-list').value;
+		//document.getElementById('info-name2').textContent = document.getElementById('hero-list').value;
 		document.getElementById('info-age').textContent = heroData[document.getElementById('hero-list').value].age;
 		document.getElementById('info-hometown').textContent = heroData[document.getElementById('hero-list').value].hometown;
 		document.getElementById('info-weapon').textContent = heroData[document.getElementById('hero-list').value].weapon;
@@ -211,35 +219,36 @@
 	</div>
 
 	<div>
-		<p><strong>Name: </strong><span id="rec-name"></span></p>
-		<p><strong>Age: </strong><span id="rec-age">17</span></p>
-		<p><strong>Hometown: </strong><span id="rec-hometown">Ylisse</span></p>
-		<p><strong>Weapon: </strong><span id="rec-weapon">Falchion</span></p>
-		<p><strong>Vocation: </strong><span id="rec-vocation">Lord</span></p>
-		<p><strong>Rating: </strong><span id="rec-rating"> - </span></p>
-		<p><strong>Bio: </strong><span id="rec-bio">Lucina is a strong willed and driven woman who is determined to alter the dark future she came from. She values her comrades deeply and has a sense of justice. Due to the countless deaths and horrific events of the future, she dislikes any form of death, even "noble" ones.<br />
-		Her main motivations come from her love for her parents, especially Chrom. Lucina is willing to do whatever it takes to see that Chrom stays alive, even if it means going against her wish for no needless deaths. Nevertheless, she is obedient to Chrom and puts her trust in her father's judgements, showing a strong bond of trust with her father.</span></p>
+		<!-- <p id="rec-name"></p>
+		<p id="rec-age"></p>
+		<p id="rec-hometown"></p>
+		<p id="rec-weapon"></p>
+		<p id="rec-vocation"></p>
+		<p id="rec-rating"></p>
+		<p id="rec-bio"></p> -->
+		<p id='rec-new'></p>
 	</div>
 </div>
 
 <script>
 	function newHero() {
 		console.log(document.getElementById('recruit-name').value);
-		var name = document.getElementById('recruit-name').value,
-		age = document.getElementById('recruit-age').value,
-		hometown = document.getElementById('recruit-home').value,
-		weapon = document.getElementById('recruit-weapon').value,
-		vocation = document.getElementById('recruit-vocation').value,
-		rating = Math.floor(Math.random() * 75) + 100,
-		bio = document.getElementById('recruit-bio').value;
+		heroData['anew'].name = document.getElementById('recruit-name').value,
+		heroData['anew'].age = document.getElementById('recruit-age').value,
+		heroData['anew'].hometown = document.getElementById('recruit-home').value,
+		heroData['anew'].weapon = document.getElementById('recruit-weapon').value,
+		heroData['anew'].vocation = document.getElementById('recruit-vocation').value,
+		heroData['anew'].rating = Math.floor(Math.random() * 75) + 100,
+		heroData['anew'].bio = document.getElementById('recruit-bio').value;
 
-		document.getElementById('rec-name').textContent = name;
-		document.getElementById('rec-age').innerHTML = age;
-		document.getElementById('rec-hometown').innerHTML = hometown;
-		document.getElementById('rec-weapon').innerHTML = weapon;
-		document.getElementById('rec-vocation').innerHTML = vocation;
-		document.getElementById('rec-rating').innerHTML = rating;
-		document.getElementById('rec-bio').innerHTML = bio;
+		document.getElementById('rec-new').innerHTML = 'Check for your profile on <em>Our Heroes<em> list!';
+		// document.getElementById('rec-name').innerHTML = '<strong>Name: </strong>' + heroData['anew'].name;
+		// document.getElementById('rec-age').innerHTML = '<strong>Age: </strong>' + age;
+		// document.getElementById('rec-hometown').innerHTML = '<strong>Hometown: </strong>' + hometown;
+		// document.getElementById('rec-weapon').innerHTML = '<strong>Weapon: </strong>' + weapon;
+		// document.getElementById('rec-vocation').innerHTML = '<strong>Vocation: </strong>' + vocation;
+		// document.getElementById('rec-rating').innerHTML = '<strong>Rating: </strong>' + rating;
+		// document.getElementById('rec-bio').innerHTML = '<strong>Bio: </strong>' + bio;
 
 		document.getElementById('newHero').removeAttribute('hidden');
 	};
@@ -251,15 +260,15 @@
 
 
 <script>
-	var states = document.getElementById('states');
+	var floors = document.getElementById('floors');
 
-	states.onchange = function() {
-		// console.log('state index: ' + states.selectedIndex);
-		// console.log('state name: ' + states.options[states.selectedIndex].text);
-		// console.log('img/' + states.value + '@2x.jpg');
-		document.getElementById('postcard').style.backgroundImage = 'url(img/' + states.value + '_em.gif)';
-		document.getElementById('greeting').innerHTML = 'Greetings from';
-		document.getElementById('state-heading').innerHTML = states.options[states.selectedIndex].text;
+	floors.onchange = function() {
+		// console.log('state index: ' + floors.selectedIndex);
+		// console.log('state name: ' + floors.options[floors.selectedIndex].text);
+		// console.log('img/' + floors.value + '@2x.jpg');
+		document.getElementById('postcard').style.backgroundImage = 'url(img/thabes-' + floors.value + '.jpg)';
+		document.getElementById('greeting').innerHTML = 'Good Luck on';
+		document.getElementById('state-heading').innerHTML = floors.options[floors.selectedIndex].text;
 	}
 </script>
 

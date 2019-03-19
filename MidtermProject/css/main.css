@@ -71,12 +71,13 @@ select {
 	padding-left: 0.5em;
 }
 #postcard {
-	width: 400px;
-	height: 600px;
+	resize: both;
 	position: absolute;
-	background-image: url('../img/fe_em.gif');
+	background-image: url('../img/valentia.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
+	width: auto;
+	height: auto;
 	box-shadow: 3px 6px 20px 0 rgba(0,0,0, .5);
 	padding-top: 58px;
 }
