@@ -2,7 +2,7 @@ html {
 	font-size: 17px;
 }
 body {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Fira Sans', sans-serif;
 	margin: 0;
 	background-color: #fcfbfa;
 }
@@ -54,13 +54,15 @@ nav li a {
 	max-width: 960px;
 	margin: auto;
 	padding: 0 1.8rem;
+
 }
 main .content-wrapper {
 	max-width: 42em;
+
 }
 header {
-	background-color: #00b0dc;
-	border-bottom: 3px solid #009bc2;
+	background-color: #06821d;
+	border-bottom: 3px solid #a53b09;
 	line-height: 1px;
 	margin: auto;
 	overflow: hidden;
@@ -78,8 +80,10 @@ header .logo {
 			rgba(0, 0, 0, .48),
 			rgba(0, 0, 0, .48)
 		),
-		url('../img/siesta-in-hammock@2x.jpg') no-repeat 60% center;
+		url('../img/SOV_banner.jpg') no-repeat 60% center;
 	background-size: cover;
+	height: 700px;
+	background-attachment: fixed;
 }
 .hero p {
 	color: #fff;
@@ -89,6 +93,29 @@ header .logo {
 	line-height: 1.5;
 	font-weight: 300;
 }
+.hero2 {
+	background:
+		linear-gradient(
+			rgba(0, 0, 0, .18),
+			rgba(0, 0, 0, .18)
+		),
+		url('../img/grima.jpg') no-repeat 60% center;
+	background-size: cover;
+	height: 700px;
+	background-attachment: fixed;
+}
+.hero1 {
+	background:
+		linear-gradient(
+			rgba(0, 0, 0, .28),
+			rgba(0, 0, 0, .28)
+		),
+		url('../img/valentia.jpg') no-repeat 60% center;
+	background-size: cover;
+	height: 700px;
+	background-attachment: fixed;
+}
+
 main {
 	box-sizing: border-box;
 	padding: 30px 0;
@@ -107,7 +134,7 @@ figure {
 	margin: 0;
 }
 figcaption {
-	color: #888;
+	color: #e5e5e5;
 	text-align: center;
 	margin: .47rem 0 1.2rem;
 	font-size: .82rem;

@@ -5,6 +5,7 @@
 	<title>Labyrinth Legends</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src= 'js/main.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=Cuprum|Fira+Sans|Marck+Script" rel="stylesheet">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Boogaloo|Open+Sans:300,400|Oswald:700">
 	<link rel="stylesheet" href="css/main2.css">
 	<link rel="stylesheet" href="css/main1.css">
@@ -14,20 +15,19 @@
 <body>
 
 <header>
-	<div class="content-wrapper">
-		<img src="" class="logo" alt="">
+	<div class="content-wrapper2">
 		<nav>
 			<ul>
-				<li><a href="#">History</a></li>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
+				<li><a href="#hist">History</a></li>
+				<li><a href="#her">Heroes</a></li>
+				<li><a href="#help">Help Us</a></li>
 			</ul>
 		</nav>
 	</div>
 </header>
 
 <div class="hero">
-	<h1>Fire Emblem: Labyrinth Legends</h1>
+	<h1>Labyrinth Legends</h1>
 	<p>The heroes that brave the dark to bring the light...</p>
 </div>
 
@@ -35,7 +35,7 @@
 	<div class="content-wrapper">
 		<p id="press-quote">You saved our future—no small feat. We will use it to find a permanent solution for the fell dragon. And we shall do so together. — Lucina</p>
 		<p style= 'text-align: center'>
-			I. This is the Thabes Labyrinth. Let none set foot within its cursed halls. <br />
+			I. This is the <a href= "https://fireemblem.fandom.com/wiki/Thabes_Labyrinth" target="_blank">Thabes Labyrinth</a>. Let none set foot within its cursed halls. <br />
 	    II. In Thabes lived an alchemist named Forneus, much praised for his genius. <br />
 	    In time, he would be feared by all. <br />
 	    III. Two matters consumed Forneus, and he spent his life in their pursuit. <br />
@@ -52,46 +52,54 @@
 	    VII. At last, blood from a divine dragon! Its power is terrifying. Beautiful. <br />
 	    VIII. The Senate has granted me all I need to craft life anew. I've succeeded. <br />
 	    At first, it was a tiny thing. But on day 80, I gave it my blood. It grew. <br />
-	    Its voice echoes in my head. Dark thoughts. Violent th- <a href="#">contact&nbsp;us</a>.</p>
+	    Its voice echoes in my head. Dark thoughts. Violent th-</p>
+		</div>
+	<div class="" id= 'hist'>
+		<header>
+			<h2>Our History</h2>
+		</header>
 
-		<h2>Our History</h2>
+		<div class= "hero1">
 
-		<figure>
-			<img src="img/valentia.jpg" alt="Valentia">
-			<figcaption>The continent of Valentia</figcaption>
-		</figure>
+			<figure>
+				<figcaption>The continent of Valentia prior to Alm's conquest. Rigel to the north and Zofia to the south.</figcaption>
+			</figure>
 
+		</div>
 
-		<p>Here before you stand ten legendary heroes whose efforts brought the whole continent of Valm (formerly Valentia) from the brink of total destruction. With their combined strength and tenacity, these youth thwarted the heretic Duma Faifthful, united the wartorn country, and liberated humanity.
-		</p>
-		<p>
-		After completing a defensive conquest of Valentia in a high stakes war for everyone’s survival, our heroes descend into the dark of Duma tower. They faced off against hordes of Risen/Undead and constructs, a corrupted Rigelian General, Jedah - archbishop of the Duma Faithful, and Duma - the Fell God - himself. Emerging triumphant, our heroes prepare to face a new threat: Thabes Labrinyth...
-		</p>
+		<div class="content-wrapper">
+			<p>Here before you stand ten legendary heroes whose efforts brought the whole continent of Valm (formerly Valentia) from the brink of total destruction. With their combined strength and tenacity, these youth thwarted the heretic Duma Faifthful, united the wartorn country, and liberated humanity from the reign of a fallen god.
+			</p>
+			<p>
+			After completing a defensive conquest of Valentia in a high stakes war for everyone’s survival, our heroes descend into the dark of Duma tower. They faced off against hordes of Risen/Undead and constructs, a corrupted Rigelian General, Jedah - archbishop of the Duma Faithful, and Duma - the Fell God - himself. Emerging triumphant, our heroes prepare to face a new threat: <a href= "https://fireemblem.fandom.com/wiki/Thabes_Labyrinth" target="_blank">Thabes Labyrinth</a>...
+			</p>
+		</div>
 	</div>
 </main>
 
-<div class="outer-wrapper">
+<div class="outer-wrapper" id= 'her'>
 	<header class="clearfix">
 		<h1>Our Heroes</h1>
-		<select id="hero-list">
-			<option value= "hero">Choose a Hero</option>
-			<option value= "alm">Alm</option>
-			<option value= "celica">Celica</option>
-			<option value= "gray">Gray</option>
-			<option value= "tobin">Tobin</option>
-			<option value= "lukas">Lukas</option>
-			<option value= "boey">Boey</option>
-			<option value= "deen">Deen</option>
-			<option value= "sonya">Sonya</option>
-			<option value= "est">Est</option>
-			<option value= "genny">Genny</option>
-			<option id= 'newHero' hidden value= "anew">New Hero</option>
-		</select>
 	</header>
 
 	<div class="main clearfix">
 		<div class="img-holder">
 			<div>
+				<select id="hero-list">
+					<option selected disabled value= "hero">Choose a Hero</option>
+					<option value= "alm">Alm</option>
+					<option value= "celica">Celica</option>
+					<option value= "gray">Gray</option>
+					<option value= "tobin">Tobin</option>
+					<option value= "lukas">Lukas</option>
+					<option value= "boey">Boey</option>
+					<option value= "deen">Deen</option>
+					<option value= "sonya">Sonya</option>
+					<option value= "est">Est</option>
+					<option value= "genny">Genny</option>
+					<option id= 'newHero' hidden value= "anew">New Hero</option>
+				</select>
+
 				<img id="info-pic" src="img1/lucina.gif" alt="Lucina, the hero" width="260">
 				<p id="info-name">Lucina, Legacy of the Hero King</p>
 			</div>
@@ -110,7 +118,7 @@
 </div>
 
 <div class="outer-wrapper">
-	<div class="content-wrapper">
+	<div class="content-wrapper2">
 		<header>
 			<h1>The Cartograph</h1>
 			<p class="subtitle">A comprehensive cartograph of the labyrinth</p>
@@ -159,13 +167,9 @@
 		document.getElementById('info-vocation').textContent = heroData[document.getElementById('hero-list').value].vocation;
 		document.getElementById('info-rating').textContent = heroData[document.getElementById('hero-list').value].rating;
 		document.getElementById('info-bio').textContent = heroData[document.getElementById('hero-list').value].bio;
-		// document.getElementById('info-flower').textContent = heroData[this.value].flower;
-		// document.getElementById('info-nickname').textContent = heroData[this.value].nickname;
+
 	};
 </script>
-<footer>
-	<p>Copyright © Labyrinth Legends</p>
-</footer>
 
 <script>
 	var quotesArray = [
@@ -184,9 +188,15 @@
 	document.getElementById('press-quote').textContent = '“' + quotesArray[randomNumber].split(' — ')[0] + '” — ' + quotesArray[randomNumber].split(' — ')[1];
 	//console.log( 	quotesArray[randomNumber].split(' — ')[0] );
 </script>
+
+<div class="hero2" id= 'help'>
+
+</div>
 <div class="container">
-	<h1>Explore the Labyrinth with Us</h1>
-	<p>Enter your info and join the team!</p>
+	<header>
+		<h1>Explore the Labyrinth with Us</h1>
+	</header>
+	<p>Enter your info and join the team! Then, check for your profile on <em>Our Heroes<em> list!</p>
 	<div class="form-container">
 		<form id="vol-form">
 			<div class="form-section">
@@ -213,19 +223,10 @@
 				<label for="recruit-bio">Bio:</label>
 				<input id="recruit-bio" name="recruit-bio" type="text">
 			</div>
-
-			<button id="submit" type="button" onclick= 'newHero()'>submit</button>
+			<a href="#her"><button id="submit" type="button" onclick= 'newHero()'>Join</button></a>
 		</form>
-	</div>
 
-	<div>
-		<!-- <p id="rec-name"></p>
-		<p id="rec-age"></p>
-		<p id="rec-hometown"></p>
-		<p id="rec-weapon"></p>
-		<p id="rec-vocation"></p>
-		<p id="rec-rating"></p>
-		<p id="rec-bio"></p> -->
+
 		<p id='rec-new'></p>
 	</div>
 </div>
@@ -240,8 +241,6 @@
 		heroData['anew'].vocation = document.getElementById('recruit-vocation').value,
 		heroData['anew'].rating = Math.floor(Math.random() * 75) + 100,
 		heroData['anew'].bio = document.getElementById('recruit-bio').value;
-
-		document.getElementById('rec-new').innerHTML = 'Check for your profile on <em>Our Heroes<em> list!';
 		// document.getElementById('rec-name').innerHTML = '<strong>Name: </strong>' + heroData['anew'].name;
 		// document.getElementById('rec-age').innerHTML = '<strong>Age: </strong>' + age;
 		// document.getElementById('rec-hometown').innerHTML = '<strong>Hometown: </strong>' + hometown;
@@ -255,7 +254,7 @@
 </script>
 
 <footer>
-	<p>Made in NY <br>Copyright © Postcard Generator</p>
+	<p>Copyright © Labyrinth Legends</p>
 </footer>
 
 

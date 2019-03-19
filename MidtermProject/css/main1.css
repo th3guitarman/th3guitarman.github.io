@@ -41,11 +41,12 @@ textarea {
 	 ========================================================================== */
 body {
 	color: #404040;
-	font-family: "Martel Sans", Helvetica, Arial, sans-serif;
+	font-family: 'Fira Sans', sans-serif;;
 }
 .outer-wrapper {
 	margin: auto;
 	max-width: 960px;
+
 }
 header select {
 	margin-top: 2.25em;
