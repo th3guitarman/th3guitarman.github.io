@@ -2,15 +2,117 @@
 <html>
   <head>
     <title>th3guitarman.github.io</title>
-  </head>
-  <body>
-    <h1>My JS Projects</h1>
-    <p><sub>site in progress</sub></p>
+      <link rel="stylesheet" href="mySite/css/style.css">
+      <!-- <link rel="stylesheet" href="mySite/css/fullpage.css">-->
+      <script type="text/javascript" src= "mySite/js/jQuery-3.3.1.js"></script>
+    </head>
+  <body id= 'Crafter'>
+    <div class="Crafter fullpage">
+      <div class="Crafter header">
+        <a href="index.html">About Aaeron</a>
+          <a href="#">bio</a>
+          <a href="#">contact</a>
+        <a href="index2.html">By Aaeron</a>
+          <a href="#">projects</a>
+          <a href="#">summary</a>
 
-    <a href= 'MidtermProject/labyrinthlegends.html' target= '_blank'>Labyrinth Legends</a>
-    <a href= 'fortuneTeller/index.html' target= '_blank'>Future Maker</a>
-    <a href= 'creditCardValidation/index.html' target= '_blank'>Credit Card Validation</a>
-    <a href= 'cashRegister/index.html' target= '_blank'>Boar Hat</a>
+      </div>
+      <div class="Crafter section active" id= 'headStockCr'>
+        <div class="sectInfo">
+          <div class="title">
+            Aaeron Jhonson-Whyte's incomplete trash fiasco of a portfolio
+          </div>
+          <div class= "xpage">
+            <img class= 'pgdown' src="mySite/imgs/blackpickdown.png" alt="">
+          </div>
 
+        </div>
+        <div class="sectIMG">
+          <!-- <img id= "crhd" src="mySite/imgs/Crafter_headstock.png" alt="a guitar"> -->
+        </div>
+      </div>
+
+
+      <div class="Crafter section" id= 'neckCr'>
+        <div class="sectInfo">
+          <div class="">
+          <img id="MyProfile" src="mySite/imgs/MyPhoto.jpg" alt="Photo of Aaeron Jhonson-Whyte" width="400" hspace="30">
+          <div class="MyBio">
+            <h1>About Me</h1>
+            <hr align=left width="25%">
+            <h2>Aaeron Jhonson-Whyte</h2>
+            <h3>Musician - Developer - Artist</h3>
+            <hr align=left width="25%">
+            <p>My name is Aaeron and I am an artist in more ways than one. For the past 10 years, music has been my life. As a guitarist and composer, I've always enjoyed using music to create art for every project. <br> <br>
+
+            However recently, I've been composing more code that music. I'd always been interested in computer logic but since learning languages like CSS, Javascript, HTML, C++, and Java, I've seen the unlimited potential and many possibilities when creating code. Employing code to solve problems is artistic and creative. Creating interesting design elements to capture attention is thought provoking fun. <br> <br>
+
+            I look forward to every opportunity to take a new challenge and, essentially, create yet another new piece of art.</p>
+          </div>
+        </div>
+          <div class= "xpage">
+            <img class= 'pgup' src="mySite/imgs/blackpickup.png" alt="">
+            <img class= 'pgdown' src="mySite/imgs/blackpickdown.png" alt="">
+          </div>
+        </div>
+        <div class="sectIMG">
+
+        </div>
+      </div>
+
+
+
+      <div class="Crafter section" id= 'bodyCr'>
+        <div class="sectInfo">
+          <div id="email">
+            aaeronjhonsonwhyte@gmail.com
+          </div>
+          <div id="insta">
+            <a href="https://www.instagram.com/onaa3r/"><img src="mySite/imgs/instagramxpicon.png" alt=""></a>
+          </div>
+          <div id="linkd">
+            <a href="https://www.linkedin.com/in/aaeron-jhonson-whyte-a6309592/"><img src="mySite/imgs/linkedinxpicon.png" alt=""></a>
+          </div>
+          <div id="resdl">
+            <img src="mySite/imgs/document-iconxp.png" alt="resume download">
+          </div>
+          <div class= "xpage">
+          </div>
+          <div class= "xpage">
+          </div>
+          <div class= "xpage">
+            <img class= 'pgup' src="mySite/imgs/blackpickup.png" alt="">
+          </div>
+
+
+        </div>
+        <div class="sectIMG">
+        </div>
+      </div>
+    </div>
+
+
+    <script type="text/javascript">
+    //click buttoh: hide current div, remove active/
+      $(function() {
+        $('.pgdown').on('click', function() {
+          // $(this).parent().parent().removeClass('active');
+          // $(this).parent().parent().next().addClass('active');
+
+          $(this).parent().parent().parent().hide(700);
+          $(this).parent().parent().parent().removeClass('active');
+          $(this).parent().parent().parent().next().hide();
+          $(this).parent().parent().parent().next().addClass('active');
+          $(this).parent().parent().parent().next().show(700);
+        });
+        $('.pgup').on('click', function() {
+          $(this).parent().parent().parent().hide(700);
+          $(this).parent().parent().parent().removeClass('active');
+          $(this).parent().parent().parent().prev().hide();
+          $(this).parent().parent().parent().prev().addClass('active');
+          $(this).parent().parent().parent().prev().show(700);
+        });
+      });
+    </script>
   </body>
 </html>

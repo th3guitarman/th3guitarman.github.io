@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="mySite/css/style.css">
+    <script type="text/javascript" src= "mySite/js/jQuery-3.3.1.js"></script>
+  </head>
+
+  <body id= 'PRS'>
+    <div class="PRS fullpage">
+      <div class="PRS header">
+        <a href="index.html">About Aaeron</a>
+          <a href="#">bio</a>
+          <a href="#">contact</a>
+        <a href="index2.html">By Aaeron</a>
+          <a href="">projects</a>
+          <a href="#">summary</a>
+      </div>
+      <div class="PRS section active" id= 'headStockPRS'>
+        <div class="sectIMG">
+        </div>
+
+        <div class="sectInfo">
+          <p>what i've done</p>
+          <div class="xpage">
+            <img class= 'pgdown' src="mySite/imgs/blackpickdown.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="PRS section" id= 'neckPRS'>
+        <div class="sectIMG">
+        </div>
+
+        <div class="sectInfo">
+          <div class="PortfolioWelcome">
+            <h1>Welcome to My Project Portfolio</h1>
+              <p>Please enjoy my collection</p>
+          </div>
+
+          <div>
+            <a href= 'fortuneTeller/index.html' target= '_blank'><img src="mySite/imgs/anew.png" alt="" class="ProjectImage"></a>
+            <p> <b class="ProjectHeader">Look to Sky3's clouds!</b><br/>
+            <em>My Fortune Teller Project, "Future Maker"</em><br/><br/>
+            Ever struggled to know the direction for your future? So many options! How can one be certain? Find out once and for all which price to choose. </p>
+          </div>
+          <div>
+            <a href= 'creditCardValidation/index.html' target= '_blank'><img src="creditCardValidation/imgs/purple_data.jpg" alt="" class="ProjectImage"></a>
+            <p> <b class="ProjectHeader">Is THIS your card?</b><br/>
+            <em>My Credit Card Validation Project, "Credit Card Validation"</em><br/><br/>
+            Can you get past our machines? Test and see if you can get your computer to think a fake credit card number is real... It only accepts <em>real</em> numbers!</p>
+          </div>
+          <div>
+            <a href= 'cashRegister/index.html' target= '_blank'><img src="cashRegister/picsrc/boarHat.jpg" alt="" class="ProjectImage"></a>
+            <p><b class="ProjectHeader">Come Shop at the Boar's Hat</b><br/>
+            <em>My Cash Register Project, "Boar Hat"</em><br/><br/>
+            The perfect pit stop before your next adventure! Shop for every adventurer's travel essentials at Meliodas' shop.</p>
+          </div>
+          <div>
+            <a href= 'MidtermProject/labyrinthlegends.html' target= '_blank'><img src="MidtermProject/img/SOV_banner.jpg" alt="" class="ProjectImage"></a>
+            <p><b class="ProjectHeader">Enter the Labyrinth, if you dare!</b><br/>
+            <em>My Midterm Project, "Labyrinth Legends"</em><br/><br/>
+            Join Lucina, Alm, Celica and the rest of the team in their quest to destory the newest threat - Thabes Labyrinth.</p>
+          </div>
+
+          <div class= "xpage">
+            <img class= 'pgup' src="mySite/imgs/blackpickup.png" alt="">
+            <img class= 'pgdown' src="mySite/imgs/blackpickdown.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="PRS section" id= 'bodyPRS'> <!-- 6th section-->
+        <div class="sectIMG">
+
+        </div>
+        <div class="sectInfo">
+          <div>i've worked at places and done things</div>
+          <div class="xpage">
+            <img class= 'pgup' src="mySite/imgs/blackpickup.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+    //click buttoh: hide current div, remove active/
+    $(function() {
+      $('.pgdown').on('click', function() {
+        // $(this).parent().parent().removeClass('active');
+        // $(this).parent().parent().next().addClass('active');
+
+        $(this).parent().parent().parent().hide(700);
+        $(this).parent().parent().parent().removeClass('active');
+        $(this).parent().parent().parent().next().hide();
+        $(this).parent().parent().parent().next().addClass('active');
+        $(this).parent().parent().parent().next().show(700);
+      });
+      $('.pgup').on('click', function() {
+        $(this).parent().parent().parent().hide(700);
+        $(this).parent().parent().parent().removeClass('active');
+        $(this).parent().parent().parent().prev().hide();
+        $(this).parent().parent().parent().prev().addClass('active');
+        $(this).parent().parent().parent().prev().show(700);
+      });
+    });
+    </script>
+
+  </body>
+</html>
