@@ -2,15 +2,15 @@
 <html>
   <head>
     <title>th3guitarman.github.io</title>
-      <link rel="stylesheet" href="mySite/css/style.css">
+      <link rel="stylesheet" href="mySite\css\style.css">
       <!-- <link rel="stylesheet" href="mySite/css/fullpage.css">-->
-      <script type="text/javascript" src= "mySite/js/jQuery-3.3.1.js"></script>
+      <script type="text/javascript" src= "mySite\js\jquery-3.3.1.js"></script>
     </head>
   <body id= 'Crafter'>
     <div class="Crafter fullpage">
       <div class="Crafter header">
         <a href="index.html">About Aaeron</a>
-        
+
         <a href="index2.html">By Aaeron</a>
 
 
@@ -92,24 +92,23 @@
 
     <script type="text/javascript">
     //click buttoh: hide current div, remove active/
-      $(function() {
+      $(document).ready(function() {
         $('.pgdown').on('click', function() {
           // $(this).parent().parent().removeClass('active');
           // $(this).parent().parent().next().addClass('active');
+          var $sectionThis = $(this).parent().parent().parent();
+          var $sectionNext = $(this).parent().parent().parent().next();
 
-          $(this).parent().parent().parent().hide(700);
-          $(this).parent().parent().parent().removeClass('active');
-          $(this).parent().parent().parent().next().hide();
-          $(this).parent().parent().parent().next().addClass('active');
-          $(this).parent().parent().parent().next().show(700);
+          $sectionThis.hide(700).removeClass('active');
+          $sectionNext.hide().addClass('active').show(700);
         });
         $('.pgup').on('click', function() {
-          $(this).parent().parent().parent().hide(700);
-          $(this).parent().parent().parent().removeClass('active');
-          $(this).parent().parent().parent().prev().hide();
-          $(this).parent().parent().parent().prev().addClass('active');
-          $(this).parent().parent().parent().prev().show(700);
+          var $sectionThis = $(this).parent().parent().parent();
+          var $sectionPrev = $(this).parent().parent().parent().prev();
+          $sectionThis.hide(700).removeClass('active');
+          $sectionPrev.hide().addClass('active').show(700);
         });
+
       });
     </script>
   </body>
