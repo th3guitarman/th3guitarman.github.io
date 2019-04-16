@@ -11,7 +11,7 @@
     <div class="PRS fullpage">
       <div class="PRS header">
         <a href="index.html">About Aaeron</a>
-    
+
         <a href="index2.html">By Aaeron</a>
 
       </div>
@@ -74,7 +74,54 @@
 
         </div>
         <div class="sectInfo">
-          <div>i've worked at places and done things</div>
+          <div>i've worked at places and done things
+		  <!--
+            Work
+              Astreya Partners, Google NYC, Manhattan, NY - <abbr title="Equipment Maintenance Tech">EMT</abbr> 3 mos
+
+              Hewlett-Packard, JPM Chase, Brooklyn, NY - <abbr title="Install, Move, and Decomission Coordinator">IMDC</abbr>, L1 Tech 1 yr
+
+              NY Hall of Science, Queens, NY - IT Intern - 2 mos
+
+            Education
+              QCC - CUNY TechWorks
+                HTML/CSS/Javascript
+                GitHub
+              NPower - Tech Fundamentals
+                A+ Certification - COMP001020915056
+
+              BMCC - 28 credits
+                Computer Programming I, II - Java
+                Choir I, II
+                Guitar I, II
+
+              CSUMB - 26 credits
+                Computer Programming I, II - C++
+                Data Structures
+
+            Music
+              Skills
+                Guitar - 10 years - Acoustic Rock, Instrumental, Metal, Gospel
+                Bass - 5 years
+                Vocal Tenor - 8 years
+
+              Performances
+                Carnegie Hall - March (?) 2015, March (?) 2017
+                Laos In Harmony Album Release Concert
+
+              Activities
+                Lead Guitarist - The Soft Whips - 2 years
+                Tenor/Guitarist/Writer - E.C.H.O. - 4 years
+
+              Recordings
+              References
+                Matthew Warner (?)
+                Ronald Celestin (?)
+                Jonathan Hall (?)
+
+              Pro Summary
+			-->
+          </div>
           <div class="xpage">
             <img class= 'pgup' src="mySite/imgs/blackpickup.png" alt="">
           </div>
@@ -84,23 +131,18 @@
 
     <script type="text/javascript">
     //click buttoh: hide current div, remove active/
-    $(function() {
+    $(document).ready(function() {
       $('.pgdown').on('click', function() {
-        // $(this).parent().parent().removeClass('active');
-        // $(this).parent().parent().next().addClass('active');
-
-        $(this).parent().parent().parent().hide(700);
-        $(this).parent().parent().parent().removeClass('active');
-        $(this).parent().parent().parent().next().hide();
-        $(this).parent().parent().parent().next().addClass('active');
-        $(this).parent().parent().parent().next().show(700);
+        var $sectionThis = $(this).parent().parent().parent();
+        var $sectionNext = $(this).parent().parent().parent().next();
+        $sectionThis.hide(700).removeClass('active');
+        $sectionNext.hide().addClass('active').show(700);
       });
       $('.pgup').on('click', function() {
-        $(this).parent().parent().parent().hide(700);
-        $(this).parent().parent().parent().removeClass('active');
-        $(this).parent().parent().parent().prev().hide();
-        $(this).parent().parent().parent().prev().addClass('active');
-        $(this).parent().parent().parent().prev().show(700);
+        var $sectionThis = $(this).parent().parent().parent();
+        var $sectionPrev = $(this).parent().parent().parent().prev();
+        $sectionThis.hide(700).removeClass('active');
+        $sectionPrev.hide().addClass('active').show(700);
       });
     });
     </script>
