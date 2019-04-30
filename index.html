@@ -3,9 +3,9 @@
   <head>
     <title>th3guitarman.github.io</title>
     <link rel="stylesheet" href="mySite\css\style.css">
-    <script type="text/javascript" src= "mySite\js\jquery-3.3.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   </head>
-  
+
   <body id= 'Crafter'>
     <div class="Crafter fullpage">
       <div class="Crafter header">
@@ -90,10 +90,10 @@
         $('.pgdown').on('click', function() {
           var $sectionThis = $(this).parent().parent().parent();
           var $sectionNext = $(this).parent().parent().parent().next();
-
           $sectionThis.hide(700).removeClass('active');
           $sectionNext.hide().addClass('active').show(700);
         });
+
         $('.pgup').on('click', function() {
           var $sectionThis = $(this).parent().parent().parent();
           var $sectionPrev = $(this).parent().parent().parent().prev();
