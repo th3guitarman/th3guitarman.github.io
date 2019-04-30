@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <title>th3guitarman.github.io</title>
     <link rel="stylesheet" href="mySite\css\style.css">
     <script type="text/javascript" src= "mySite\js\jQuery-3.3.1.js"></script>
   </head>
@@ -164,20 +163,21 @@
 
     <script type="text/javascript">
     //click buttoh: hide current div, remove active/
-    $(document).ready(function() {
-      $('.pgdown').on('click', function() {
-        var $sectionThis = $(this).parent().parent().parent();
-        var $sectionNext = $(this).parent().parent().parent().next();
-        $sectionThis.hide(700).removeClass('active');
-        $sectionNext.hide().addClass('active').show(700);
+      $(document).ready(function() {
+        $('.pgdown').on('click', function() {
+          var $sectionThis = $(this).parent().parent().parent();
+          var $sectionNext = $(this).parent().parent().parent().next();
+          $sectionThis.hide(700).removeClass('active');
+          $sectionNext.hide().addClass('active').show(700);
+        });
+        
+        $('.pgup').on('click', function() {
+          var $sectionThis = $(this).parent().parent().parent();
+          var $sectionPrev = $(this).parent().parent().parent().prev();
+          $sectionThis.hide(700).removeClass('active');
+          $sectionPrev.hide().addClass('active').show(700);
+        });
       });
-      $('.pgup').on('click', function() {
-        var $sectionThis = $(this).parent().parent().parent();
-        var $sectionPrev = $(this).parent().parent().parent().prev();
-        $sectionThis.hide(700).removeClass('active');
-        $sectionPrev.hide().addClass('active').show(700);
-      });
-    });
     </script>
 
   </body>
