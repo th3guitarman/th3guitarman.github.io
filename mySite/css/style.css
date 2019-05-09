@@ -3,26 +3,35 @@
   padding: 0;
 
 }
+body, html {
+  width: 100%;
+  height: 100%;
+  font-size: 62.5%;
+}
 #Crafter { /*whole page bg color*/
   background-color: #642F29;
+  height: auto;
 }
 #PRS { /*whole page bg color*/
   background-color: #130F12;
+  height: auto;
 }
 .header { /*stationary header*/
   width: 100vw;
-  height: 20vh;
+  height: 12vh;
   position: fixed;
   top: 0;
   left: 0;
   align-items: center;
-  font-size: 25px;
+  font-size: 9em;
 }
 .Crafter.header {
   background-color: inherit;
+  font-family: 'Shadows Into Light', cursive;
 }
 .PRS.header {
   background-color: inherit;
+  font-family: 'Satisfy', cursive;
 }
 
 /* Handles the format for each "page" */
@@ -30,21 +39,24 @@
   width: 100vw;
   height: 78vh;
   position: absolute;
-  top: 20vh;
+  top: 12vh;
   left: 0;
   display: grid;
   visibility: hidden;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
+  font-size: 2.65em;
 
 }
 .section.Crafter {
-    grid-template-columns: 4fr 2fr;
+    grid-template-columns: 5fr 2fr;
     background-color: #C3A791;
+    font-family: 'Just Another Hand', cursive;
 }
 .section.PRS {
-    grid-template-columns: 2fr 4fr;
+    grid-template-columns: 2fr 5fr;
     background-color: #83858C;
+    font-family: 'Rajdhani', sans-serif;
 }
 .active {
   visibility: visible;
@@ -62,7 +74,9 @@
   background-size: contain;
   background-color: inherit /*#6D3D14*/;
 }
-
+#sectInfo {
+  height: auto;
+}
 .pgup, .pgdown {
   height: 8vh;
 }
@@ -152,7 +166,8 @@
   grid-column: 1/4;
   grid-row: 7/8;
 }
-#insta img, #linkd img, #resdl img, #githb img {
+#insta img, #linkd img,
+#resdl img, #githb img {
   height: 8vh;
 }
 #bodyCr .sectInfo #email {
@@ -235,36 +250,101 @@
 
 
 /* #bodyPRS page formatting */
+
 #bodyPRS .sectInfo {
   display: grid;
-  grid-template-rows: 6fr 1fr 1fr;
-  grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  font-weight: 900;
+  grid-row-gap: 1.5em;
 }
 #bodyPRS .sectIMG {
   background-image: url('../imgs/PRS_bodymost.png');
 }
+
+#booksicon img, #playicon img,
+#musicicon img, #workicon img {
+  height: 20vh;
+  -webkit-transform: translateZ(-1);
+  transform: translateZ(-1);
+}
 #bodyPRS .sectInfo div {
-  border: solid;
-  padding: 2em 2em 2em 2em;
-  /* display: flex;
+  display: flex;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
+  /*
+
+  border: solid;
+  */
 }
 #bodyPRS .sectInfo #myWork {
-  grid-column: 2/3;
-  grid-row: 1/6;
+  grid-column: 1/5;
+  grid-row: 1/4;
+  background-color: #DDA15E;
+  opacity: .75;
+  font-size: 1em;
+  padding: 1em 1.5em 1em 1.5em;
+
 }
 #bodyPRS .sectInfo #myEdu {
-  grid-column: 3/4;
-  grid-row: 1/6;
+  grid-column: 4/8;
+  grid-row: 3/6;
+  background-color: #FEFAE0;
+  opacity: .75;
+  padding: 1em 1.5em 1em 1.5em;
 }
 #bodyPRS .sectInfo #myMusic {
-  grid-column: 4/5;
-  grid-row: 1/6;
+  grid-column: 7/12;
+  grid-row: 1/4;
+  background-color: #922724;
+  opacity: .75;
+  padding: 1em 1.5em 1em 1.5em;
+}
+#bodyPRS .sectInfo #myAct {
+  grid-column: 9/13;
+  grid-row: 3/6;
+  background-color: #5F4842;
+  opacity: .75;
+  padding: 1em 1.5em 1em 1.5em;
+}
+#bodyPRS img ~ h2 {
+  font-family: 'Satisfy', cursive;
+
+  transform: translateZ(0);
+}
+#bodyPRS .sectInfo #workicon {
+  grid-column: 1/5;
+  grid-row: 1/4 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#bodyPRS .sectInfo #booksicon {
+  grid-column: 4/8;
+  grid-row: 3/6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#bodyPRS .sectInfo #musicicon {
+  grid-column: 7/12;
+  grid-row: 1/4;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 1em;
+}
+#bodyPRS .sectInfo #playicon {
+  grid-column: 9/13;
+  grid-row: 3/6;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 1em;
 }
 #bodyPRS .sectInfo .xpage {
   grid-column: 1/-1;
-  grid-row: 8/9;
+  grid-row: 6/7;
   padding: 0;
   display: flex;
   justify-content: center;
