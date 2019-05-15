@@ -117,7 +117,8 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  color: #F7DAD9;
+  /* text-shadow: 1px 1px black; */
   border: none;
 }
 #neckCr .sectIMG {
@@ -126,24 +127,38 @@ body, html {
 #neckCr .sectInfo #myPhoto {
   grid-column: 1/5;
   grid-row: 1/6;
-}
-#neckCr .sectInfo #myRole {
-  grid-column: 5/12;
-  grid-row: 1/2;
+
 }
 #neckCr .sectInfo #myName {
   grid-column: 5/12;
+  grid-row: 1/2;
+}
+#neckCr .sectInfo #myRole {
+  grid-column: 5/12;
   grid-row: 2/4;
   align-items: start;
+  font-size: 1.5em;
+  background-color: #AF2440;
+  text-shadow: .1em .1em #551B14;
+  padding-top: 1.1375em;
+
 }
 #neckCr .sectInfo #myBio {
   grid-column: 6/12;
-  grid-row: 3/6;
+  grid-row: 3/7;
   padding: 0 2vw 0 2vw;
+  font-size: 1.25em;
+  line-height: 1.675em;
+  background-color: #2C2C54;
+  font-family: 'Stylish', sans-serif;
 }
 #neckCr .sectInfo .xpage {
   grid-column: 1/-1;
   grid-row: 7/8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 /* #bodyCr page formatting */
@@ -154,10 +169,11 @@ body, html {
   grid-template-columns: 1fr 1fr;
 }
 #bodyCr .sectInfo div {
-  border: solid;
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 #bodyCr .sectIMG {
   background-image: url('../imgs/Crafter_bodymost.png');
@@ -173,22 +189,28 @@ body, html {
 #bodyCr .sectInfo #email {
   grid-column: 1/-1;
   grid-row: 3;
+  font-size: 3em;
+  padding: 1em;
 }
 #bodyCr .sectInfo #insta {
   grid-column: 1/2;
   grid-row: 2;
+  background-color: #F7DAD9;
 }
 #bodyCr .sectInfo #linkd {
   grid-column: 2/3;
   grid-row: 2;
+  background-color: #2C2C54;
 }
 #bodyCr .sectInfo #resdl {
   grid-column: 1/2;
   grid-row: 4;
+  background-color: #C92A2A;
 }
 #bodyCr .sectInfo #githb {
   grid-column: 2/3;
   grid-row: 4;
+  background-color: #BADA55;
 }
 
 /* #headStockPRS page formatting */
@@ -211,7 +233,8 @@ body, html {
   align-items: center;
 }
 #neckPRS .sectIMG {
-  background-image: url('../imgs/PRS_neckfull.png');
+  background-image: url('../imgs/PRS_neckfull2.png');
+  background-size: 100%;
 }
 .PortfolioWelcome {
   grid-column: 1/3;
@@ -257,6 +280,7 @@ body, html {
   grid-template-columns: repeat(12, 1fr);
   font-weight: 900;
   grid-row-gap: 1.5em;
+  font-family: 'Stylish', sans-serif;
 }
 #bodyPRS .sectIMG {
   background-image: url('../imgs/PRS_bodymost.png');
@@ -284,6 +308,7 @@ body, html {
   opacity: .75;
   font-size: 1em;
   padding: 1em 1.5em 1em 1.5em;
+
 
 }
 #bodyPRS .sectInfo #myEdu {
