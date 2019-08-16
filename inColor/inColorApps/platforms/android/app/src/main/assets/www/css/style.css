@@ -1,0 +1,52 @@
+body[id="red"] {
+  background-color: hsl(359, 76%, 49%);
+  color: white;
+}
+body[id="cyan"] {
+  background-color: hsl(179, 76%, 49%);
+}
+.container.red {
+  background-color: rgba(5, 5, 5, 0.5);
+}
+.container.cyan {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.container {
+  background-color: rgba(5, 5, 5, 0.5);
+  position: relative;
+  width: 100%;
+  max-width: 80vw;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+}
+
+.sec-red .image {
+    background-image: url("/src/red-clouds.jpg");
+    box-shadow: 10px 10px 10px lightgray;
+}
+.sec-cyan .image {
+    background-image: url("/src/cyan-cloud.jpg");
+    box-shadow: 10px 10px 10px darkgray;
+}
+.image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/3;
+  grid-row: 1/3;
+
+  height: 40vh;
+
+}
+.hidden {
+  display: none;
+}
+.info {
+  visibility: hidden;
+  display: none;
+}
+.active {
+  visibility: visible;
+  display: inherit;
+}
