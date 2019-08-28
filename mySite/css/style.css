@@ -3,3 +3,138 @@
 @tailwind components;
 
 @tailwind utilities;
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+/* visual height classes */
+.h-5p {height: 5vh;}
+
+.h-10p {height: 10vh;}
+
+.h-12p {height: 12.5vh;}
+
+.h-15p {height: 15vh;}
+
+.h-16p {height: 16.66667vh;}
+
+.h-20p {height: 20vh;}
+
+.h-25p {height: 25vh;}
+
+.h-30p {height: 30vh;}
+
+.h-33p {height: 33.33333vh;}
+
+.h-35p {height: 35vh;}
+
+.h-37p {height: 37.5vh;}
+
+.h-40p {height: 40vh;}
+
+.h-45p {height: 45vh;}
+
+.h-50p {height: 50vh;}
+
+.h-55p {height: 55vh;}
+
+.h-60p {height: 60vh;}
+
+.h-62p {height: 62.5vh;}
+
+.h-65p {height: 65vh;}
+
+.h-66p {height: 66.66666vh;}
+
+.h-70p {height: 70vh;}
+
+.h-75p {height: 75vh;}
+
+.h-80p {height: 80vh;}
+
+.h-83p {height: 83.33333vh;}
+
+.h-85p {height: 85vh;}
+
+.h-90p {height: 90vh;}
+
+.h-95p {height: 95vh;}
+
+/*visual width classes*/
+.w-5p {width: 5vw;}
+
+.w-10p {width: 10vw;}
+
+.w-12p {width: 12.5vw;}
+
+.w-15p {width: 15vw;}
+
+.w-16p {width: 16.66667vw;}
+
+.w-20p {width: 20vw;}
+
+.w-25p {width: 25vw;}
+
+.w-30p {width: 30vw;}
+
+.w-33p {width: 33.33333vw;}
+
+.w-35p {width: 35vw;}
+
+.w-37p {width: 37.5vw;}
+
+.w-40p {width: 40vw;}
+
+.w-45p {width: 45vw;}
+
+.w-50p {width: 50vw;}
+
+.w-55p {width: 55vw;}
+
+.w-60p {width: 60vw;}
+
+.w-62p {width: 62.5vw;}
+
+.w-65p {width: 65vw;}
+
+.w-66p {width: 66.66666vw;}
+
+.w-70p {width: 70vw;}
+
+.w-75p {width: 75vw;}
+
+.w-80p {width: 80vw;}
+
+.w-83p {width: 83.33333vw;}
+
+.w-85p {width: 85vw;}
+
+.w-90p {width: 90vw;}
+
+.w-95p {width: 95vw;}
+
+.item {
+  width: 33.333%;
+  height: 40vh;
+  line-height: 200px;
+  cursor: pointer;
+  /* border-right: 1px solid black; */
+}
+.info {
+    height: 40vh;
+    width: 0;
+    display: none
+}
+
+.item.work {
+  background-image: url(../imgs/work_silh.png);
+}
+.item.edu {
+  background-image: url(../imgs/read_silh.png);
+}
+.item.muse {
+  background-image: url(../imgs/guitar_silh.png);
+}
