@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @tailwind base;
 
 @tailwind components;
@@ -138,3 +139,392 @@
 .item.muse {
   background-image: url(../imgs/guitar_silh.png);
 }
+=======
+* {
+  margin: 0;
+  padding: 0;
+
+}
+body, html {
+  width: 100%;
+  height: 100%;
+  font-size: 62.5%;
+}
+#Crafter { /*whole page bg color*/
+  background-color: #642F29;
+  height: auto;
+}
+#PRS { /*whole page bg color*/
+  background-color: #130F12;
+  height: auto;
+}
+.header { /*stationary header*/
+  width: 100vw;
+  height: 12vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  font-size: 9em;
+}
+.Crafter.header {
+  background-color: inherit;
+  font-family: 'Shadows Into Light', cursive;
+}
+.PRS.header {
+  background-color: inherit;
+  font-family: 'Satisfy', cursive;
+}
+
+/* Handles the format for each "page" */
+.section {
+  width: 100vw;
+  height: 78vh;
+  position: absolute;
+  top: 12vh;
+  left: 0;
+  display: grid;
+  visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  font-size: 2.65em;
+
+}
+.section.Crafter {
+    grid-template-columns: 5fr 2fr;
+    background-color: #C3A791;
+    font-family: 'Just Another Hand', cursive;
+}
+.section.PRS {
+    grid-template-columns: 2fr 5fr;
+    background-color: #83858C;
+    font-family: 'Rajdhani', sans-serif;
+}
+.active {
+  visibility: visible;
+}
+
+.PRS .sectIMG {
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: inherit;
+}
+.Crafter .sectIMG {
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: inherit /*#6D3D14*/;
+}
+#sectInfo {
+  height: auto;
+}
+.pgup, .pgdown {
+  height: 8vh;
+}
+
+/* headStockCr page formatting */
+
+#headStockCr .sectInfo {
+  display: grid;
+  grid-template-rows: 1fr 1fr 3fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#headStockCr .sectInfo div {
+  border: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#headStockCr .sectIMG {
+  background-image: url('../imgs/Crafter_headstock.png');
+}
+#headStockCr .sectInfo .title {
+  grid-column: 1/4;
+  grid-row: 2/4;
+}
+#headStockCr .sectInfo .xpage {
+  grid-column: 1/-1;
+  grid-row: 7/8;
+}
+
+/* neckCR Page formatting */
+
+#neckCr .sectInfo {
+  display: grid;
+  grid-template-rows: 1fr 1fr 3fr 2fr;
+  grid-template-columns: repeat(11, 1fr);
+}
+#neckCr .sectInfo div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #F7DAD9;
+  /* text-shadow: 1px 1px black; */
+  border: none;
+}
+#neckCr .sectIMG {
+  background-image: url('../imgs/Crafter_neckfull.png');
+}
+#neckCr .sectInfo #myPhoto {
+  grid-column: 1/5;
+  grid-row: 1/6;
+
+}
+#neckCr .sectInfo #myName {
+  grid-column: 5/12;
+  grid-row: 1/2;
+}
+#neckCr .sectInfo #myRole {
+  grid-column: 5/12;
+  grid-row: 2/4;
+  align-items: start;
+  font-size: 1.5em;
+  background-color: #AF2440;
+  text-shadow: .1em .1em #551B14;
+  padding-top: 1.1375em;
+
+}
+#neckCr .sectInfo #myBio {
+  grid-column: 6/12;
+  grid-row: 3/7;
+  padding: 0 2vw 0 2vw;
+  font-size: 1.25em;
+  line-height: 1.675em;
+  background-color: #2C2C54;
+  font-family: 'Stylish', sans-serif;
+}
+#neckCr .sectInfo .xpage {
+  grid-column: 1/-1;
+  grid-row: 7/8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* #bodyCr page formatting */
+
+#bodyCr .sectInfo {
+  display: grid;
+  grid-template-rows: 1fr 1fr 2fr 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
+}
+#bodyCr .sectInfo div {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+#bodyCr .sectIMG {
+  background-image: url('../imgs/Crafter_bodymost.png');
+}
+#bodyCr .sectInfo .xpage{
+  grid-column: 1/4;
+  grid-row: 7/8;
+}
+#insta img, #linkd img,
+#resdl img, #githb img {
+  height: 8vh;
+}
+#bodyCr .sectInfo #email {
+  grid-column: 1/-1;
+  grid-row: 3;
+  font-size: 3em;
+  padding: 1em;
+}
+#bodyCr .sectInfo #insta {
+  grid-column: 1/2;
+  grid-row: 2;
+  background-color: #F7DAD9;
+}
+#bodyCr .sectInfo #linkd {
+  grid-column: 2/3;
+  grid-row: 2;
+  background-color: #2C2C54;
+}
+#bodyCr .sectInfo #resdl {
+  grid-column: 1/2;
+  grid-row: 4;
+  background-color: #C92A2A;
+}
+#bodyCr .sectInfo #githb {
+  grid-column: 2/3;
+  grid-row: 4;
+  background-color: #BADA55;
+}
+
+/* #headStockPRS page formatting */
+
+#headStockPRS .sectIMG {
+  background-image: url('../imgs/PRS_headstock.png')
+}
+
+/* #neckPRS page formatting */
+
+#neckPRS .sectInfo {
+  display: grid;
+  grid-template-rows: 1fr 3fr 3fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+#neckPRS .sectInfo div {
+  border: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#neckPRS .sectIMG {
+  background-image: url('../imgs/PRS_neckfull2.png');
+  background-size: 100%;
+}
+.PortfolioWelcome {
+  grid-column: 1/3;
+  grid-row: 1;
+}
+#neckPRS .sectInfo > div[class='PortfolioProject']:nth-of-type(1) {
+  grid-column: 1/2;
+  grid-row: 2;
+}
+#neckPRS .sectInfo > div[class='PortfolioProject']:nth-of-type(2) {
+  grid-column: 2/3;
+  grid-row: 2;
+}
+#neckPRS .sectInfo > div[class='PortfolioProject']:nth-of-type(3) {
+  grid-column: 1/2;
+  grid-row: 3;
+}
+#neckPRS .sectInfo > div[class='PortfolioProject']:nth-of-type(4) {
+  grid-column: 2/3;
+  grid-row: 3;
+}
+#neckPRS .sectInfo div > * {
+  margin: 0 .5em 0 .5em;
+}
+#neckPRS .sectInfo .xpage {
+  grid-column: 1/-1;
+  grid-row: 4/5;
+}
+
+#neckPRS .ProjectImage {
+  width: 150px;
+}
+#neckPRS .ProjectHeader {
+  font-size: 25px;
+}
+
+
+/* #bodyPRS page formatting */
+
+#bodyPRS .sectInfo {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  font-weight: 900;
+  grid-row-gap: 1.5em;
+  font-family: 'Stylish', sans-serif;
+}
+#bodyPRS .sectIMG {
+  background-image: url('../imgs/PRS_bodymost.png');
+}
+
+#booksicon img, #playicon img,
+#musicicon img, #workicon img {
+  height: 20vh;
+  -webkit-transform: translateZ(-1);
+  transform: translateZ(-1);
+}
+#bodyPRS .sectInfo div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*
+
+  border: solid;
+  */
+}
+#bodyPRS .sectInfo #myWork {
+  grid-column: 1/5;
+  grid-row: 1/4;
+  background-color: #DDA15E;
+  opacity: .75;
+  font-size: 1em;
+  padding: 1em 1.5em 1em 1.5em;
+
+
+}
+#bodyPRS .sectInfo #myEdu {
+  grid-column: 4/8;
+  grid-row: 3/6;
+  background-color: #FEFAE0;
+  opacity: .75;
+  padding: 1em 1.5em 1em 1.5em;
+}
+#bodyPRS .sectInfo #myMusic {
+  grid-column: 7/12;
+  grid-row: 1/4;
+  background-color: #922724;
+  opacity: .75;
+  padding: 1em 1.5em 1em 1.5em;
+}
+#bodyPRS .sectInfo #myAct {
+  grid-column: 9/13;
+  grid-row: 3/6;
+  background-color: #5F4842;
+  opacity: .75;
+  padding: 1em 1.5em 1em 1.5em;
+}
+#bodyPRS img ~ h2 {
+  font-family: 'Satisfy', cursive;
+
+  transform: translateZ(0);
+}
+#bodyPRS .sectInfo #workicon {
+  grid-column: 1/5;
+  grid-row: 1/4 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#bodyPRS .sectInfo #booksicon {
+  grid-column: 4/8;
+  grid-row: 3/6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#bodyPRS .sectInfo #musicicon {
+  grid-column: 7/12;
+  grid-row: 1/4;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 1em;
+}
+#bodyPRS .sectInfo #playicon {
+  grid-column: 9/13;
+  grid-row: 3/6;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 1em;
+}
+#bodyPRS .sectInfo .xpage {
+  grid-column: 1/-1;
+  grid-row: 6/7;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#bodyPRS ul {
+  list-style-type: none;
+  margin-left: 1em;
+}
+#bodyPRS dt {
+  margin-left: 1em;
+}
+#bodyPRS dd {
+  margin-left: 2em;
+}
+>>>>>>> b3a2313b139c959aa2b82b67311da6c4892297b2
