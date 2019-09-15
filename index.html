@@ -85,31 +85,66 @@
     <div class="p-6">
       <h2 class= "text-4xl text-center">Project Portfolio</h1>
     </div>
-    <h3 id= "project-name" class= "p-6 text-2xl">PROJECT_NAME_HERE</h3>
+    <h3 id= "project-name" class= "overflow-y-hidden p-6 text-2xl">PROJECT_NAME_HERE</h3>
     <div class="container flex h-12 py-20">
       <div class= "hidden lg:block lg:w-6/12">
-        <p id= "project-description" class="p-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat totam fugiat, cupiditate, nulla, voluptas fuga, dolorem deserunt dolore sunt non odio iste quis. Magni eos fuga praesentium vero quisquam, provident nam ad, iusto veniam adipisci aperiam ratione suscipit, placeat nisi?</p>
+        <p id= "project-description" class="overflow-y-hidden p-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat totam fugiat, cupiditate, nulla, voluptas fuga, dolorem deserunt dolore sunt non odio iste quis. Magni eos fuga praesentium vero quisquam, provident nam ad, iusto veniam adipisci aperiam ratione suscipit, placeat nisi?</p>
       </div>
       <div class="flex justify-center mt-20 mx-auto lg:w-1/12 ">
-        <img src="mySite\imgs\blackpickleft.png" alt="" class="h-10 px-3">
+        <img id= "nav-left" src="mySite\imgs\blackpickleft.png" alt="" class="nav h-10 px-3">
       </div>
       <div class="lg:w-4/12 w-75p">
         <a id= "project-link"href="">
-          <img id= "project-img" src="mySite/imgs/anew.png" alt="" class="h-30p mx-auto">
+          <img id= "project-img" src="" alt="" class="h-30p mx-auto" target="_blank">
         </a>
         <i class="fas fa-info-circle lg:invisible p-4"></i>
-        <p id= "project-info"></p>
+        <p id= "project-info" class= "overflow-y-hidden"></p>
       </div>
       <div class= "flex justify-center mt-20 mx-auto lg:w-1/12 ">
-        <img src="mySite\imgs\blackpickright.png" alt="" class="h-10 px-3">
+        <img id= "nav-right" src="mySite\imgs\blackpickright.png" alt="" class="nav h-10 px-3">
       </div>
     </div>
-    <!-- <script src="mySite\js\script.js" charset="utf-8"></script> -->
+
     <script type="text/javascript">
     $(function() {
-      document.querySelector('#project-name').textContent = project_data["future_maker"].name;
-      console.log(project_data);
+      var data_nav = [0, 1, 2, 3, 4];
+      var selected = 0;
+      showPortfolio(selected);
+      $('#nav-right').click(function () {
+        $this = $(this);
+        if (selected < data_nav.length-1) {
+          selected++;
+        }
+        else {
+          selected = 0;
+        }
+        showPortfolio(selected);
+      });
+      $('#nav-left').click(function () {
+        $this = $(this);
+        if (selected > 0) {
+          selected--;
+        }
+        else {
+          selected = data_nav.length-1;
+        }
+        showPortfolio(selected);
+      });
     });
+    function transition_left () {
+      $('#project-name').animate({ width: 0})
+    }
+    function transition_right () {
+
+    }
+    function showPortfolio (data_index) {
+      $('#project-name').text(project_data[data_index].name);
+      $('#project-description').text(project_data[data_index].description);
+      $('#project-link').attr('href', project_data[data_index].link);
+      $('#project-img').attr('src', project_data[data_index].img);
+      $('#project-info').text(project_data[data_index].info);
+    };
+
     </script>
 
   </div>
@@ -242,9 +277,6 @@
     <div id="playicon">
       <img src="imgs\playicon.png" alt="" ><br />
       <h2>My Activity • • •</h2>
-    </div>
-    <div class="xpage">
-      <img class= 'pgup' src="imgs/blackpickup.png" alt="">
     </div>
   </div>
 
