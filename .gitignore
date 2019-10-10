@@ -1,2 +1,3 @@
 #ignore the none modules
 node_modules/
+inColor/inColorApps/node_modules/
