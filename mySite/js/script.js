@@ -48,3 +48,5 @@ var project_data =  {
     link: ''
   }
 };
+
+//Prevent scrolling
