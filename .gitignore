@@ -1,0 +1,4 @@
+#ignore the node modules
+node_modules/
+**/node_modules/
+inColor/
