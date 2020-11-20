@@ -1,3 +1,14 @@
+var site_data = {
+  p1: {
+    en: "",
+    sp: ""
+  },
+  p2: {
+    en: "",
+    sp: ""
+  }
+};
+
 var picture_srcs = ['src/daisies.png', 'src/bouquet.png', 'src/gazanie.png', 'src/peach_flowers.png', 'src/daffodil.png'];
 var pos1 = 0, pos2 = 2, pos3 = 4;
 

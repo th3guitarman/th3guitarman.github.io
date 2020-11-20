@@ -1,4 +1,8 @@
 #ignore the node modules
 node_modules/
 **/node_modules/
+<<<<<<< HEAD
 inColor/
+=======
+inColor/
+>>>>>>> efd7d56d1c9039a10bbe97876eb67a404fcc227f
