@@ -1,0 +1,16 @@
+{
+  "name": "InkNat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "build:css": "tailwind build style.css -o output.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "tailwindcss": "^1.4.6"
+  }
+}
